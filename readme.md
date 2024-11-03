@@ -17,6 +17,18 @@ Installation
 
 Hopefully this will be on [MELPA][m] before anyone finds it.
 
+If you're handsome enough to use [Doom Emacs][doom], you can install directly
+from here with
+
+```
+(package! ignore-mouse
+  :recipe (:host github
+           :repo "dradetsky/ignore-mouse"))
+```
+
+It's probably also possible to do this with native `straight.el` (as opposed the
+Doom wrapper), but I wouldn't know. Good luck with that!
+
 You can also install it manually if you're some kind of psychopath, but I won't
 be providing instructions since I don't support that kind of degeneracy.
 
@@ -29,3 +41,4 @@ Usage
 
 [dm]: https://github.com/purcell/disable-mouse
 [m]: https://melpa.org/
+[doom]: https://github.com/doomemacs/doomemacs
