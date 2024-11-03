@@ -1,10 +1,20 @@
 ;;; ignore-mouse.el --- Ignore mouse inputs globally  -*- lexical-binding: t -*-
 
+;; URL: https://github.com/dradetsky/ignore-mouse
 ;; Version: 0.0.1
+;; Package-Requires: ((emacs "24.3"))
 
 ;; This file is NOT part of GNU Emacs.
 
 ;; SPDX-License-Identifier: WTFPL
+
+;;; Commentary:
+
+;; TODO
+
+;;; Code:
+
+(require 'cl-lib)
 
 (defgroup ignore-mouse nil
   "Ignore mouse inputs globally."
