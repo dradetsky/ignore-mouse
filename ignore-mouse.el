@@ -26,8 +26,10 @@
   :group 'ignore-mouse
   :type 'string)
 
-(defconst ignore-mouse/base-events '("mouse" "down-mouse" "up-mouse" "drag-mouse"))
-(defconst ignore-mouse/wheel-events '("wheel-down" "wheel-up" "wheel-left" "wheel-right"))
+(defconst ignore-mouse/base-events
+  '("mouse" "down-mouse" "up-mouse" "drag-mouse"))
+(defconst ignore-mouse/wheel-events
+  '("wheel-down" "wheel-up" "wheel-left" "wheel-right"))
 (defconst ignore-mouse/touch-events '("pinch"))
 
 (defun ignore-mouse/gen-numbered (elist n)
@@ -39,9 +41,10 @@
   (mapcar (lambda (x) (concat "<" x ">")) elist))
 
 (defconst ignore-mouse/default-event-ids
-  (ignore-mouse/anglefy (append (ignore-mouse/gen-numbered ignore-mouse/base-events 7)
-                                ignore-mouse/wheel-events
-                                ignore-mouse/touch-events)))
+  (ignore-mouse/anglefy
+   (append (ignore-mouse/gen-numbered ignore-mouse/base-events 7)
+           ignore-mouse/wheel-events
+           ignore-mouse/touch-events)))
 
 (defun ignore-mouse/apply-to (map &optional arg-elist)
   (let ((elist (or arg-elist ignore-mouse/default-event-ids)))
@@ -54,7 +57,7 @@
              do (keymap-unset map e))))
 
 (defvar ignore-mouse-event-ids ignore-mouse/default-event-ids
-  "List of event ids to be ignored, as in \"<mouse-1>\"")
+  "List of event ids to be ignored, as in \\='(\"<mouse-1>\").")
 
 ;;;###autoload
 (define-minor-mode ignore-mouse-global-mode
