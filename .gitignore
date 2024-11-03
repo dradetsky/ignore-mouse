@@ -1,3 +1,5 @@
 # Added automatically by ‘eldev init’.
 /.eldev
 /Eldev-local
+*.elc
+ignore-mouse-autoloads.el
